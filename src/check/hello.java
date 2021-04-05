@@ -15,6 +15,7 @@ public class hello {
 		int m = a*b;
 		System.out.println(x);
 		System.out.println(m);
+		System.out.println("done!!");
 	}
 
 }
