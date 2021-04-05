@@ -11,8 +11,8 @@ public class hello {
 		System.out.println("how r u??");
 		System.out.println("ok12");
 		int a =6, b = 1;
-		int c = a+b;
-		System.out.println(c);
+		int x = a+b;
+		System.out.println(x);
 
 
 	}
