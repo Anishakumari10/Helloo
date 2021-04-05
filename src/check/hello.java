@@ -12,9 +12,9 @@ public class hello {
 		System.out.println("ok12");
 		int a =6, b = 1;
 		int x = a+b;
+		int p = a*b;
 		System.out.println(x);
-
-
+		System.out.println(p);
 	}
 
 }
