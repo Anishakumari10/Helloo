@@ -14,7 +14,7 @@ public class hello {
 		int x = a+b;
 		int m = a*b;
 		System.out.println(x);
-		System.out.println(p);
+		System.out.println(m);
 	}
 
 }
