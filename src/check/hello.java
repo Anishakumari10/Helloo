@@ -10,7 +10,7 @@ public class hello {
 		System.out.println("ok");
 		System.out.println("how r u??");
 		System.out.println("ok12");
-		int a =5, b = 7;
+		int a =8, b = 9;
 		int c = a+b;
 		System.out.println(c);
 
