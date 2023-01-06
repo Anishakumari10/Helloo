@@ -1,4 +1,4 @@
-
+ALTER TABLE crdb_schema REPLACE COLUMNS(
 BIN Integer,
 Filler1 Integer,
 businessName String,
