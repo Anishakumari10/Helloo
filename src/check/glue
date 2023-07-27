@@ -10,3 +10,8 @@ aws glue start-job-run --job-name "excelsiorExportFileMergeTest" --arguments "{\
 
 
 aws glue start-job-run --job-name "excelsiorExportFileMergeTest" --arguments "{\"--BUCKET_NAME\":\"expn-bis-dev-orderfulfillment/\",\"--FILE_NAME\":\"EDF_BIS_JDI_UN.EDF_BIS_JDI_UN.A123321_CC1FU9A9UC7_2023072712403011_1GJ6585I6_1GM3OEMCM\",\"--INPUT_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/2023072712403011\",\"--TMP_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/2023072712403011/out\",\"--INPUT_FORMAT\":\"csv\",\"--HAS_HEADER\":\"False\"}" --region us-east-1 --debug
+
+
+awscli.shorthand.ShorthandParseSyntaxError: Expected: '=', received: '"' for input:
+"{\"--BUCKET_NAME\":\"expn-bis-dev-orderfulfillment/\",\"--FILE_NAME\":\"EDF_BIS_JDI_UN.EDF_BIS_JDI_UN.A123321_CC1FU9A9UC7_20230727142441913_1GJ6585I6_1GM3OEMCM\",\"--INPUT_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/20230727142441913\",\"--TMP_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/20230727142441913/out\",\"--INPUT_FORMAT\":\"csv\",\"--HAS_HEADER\":\"False\"}"
+^
