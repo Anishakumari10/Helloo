@@ -23,3 +23,7 @@ awscli.argprocess.ParamError: Error parsing parameter '--arguments': Expected: '
 
 aws glue start-job-run --job-name "excelsiorExportFileMergeTest" --arguments "{\"--BUCKET_NAME\":\"expn-bis-dev-orderfulfillment/\", \"--FILE_NAME\":\"EDF_BIS_JDI_UN.EDF_BIS_JDI_UN.A123321_CC1FU9A9UC7_2023072712403011_1GJ6585I6_1GM3OEMCM\", \"--INPUT_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/2023072712403011\", \"--TMP_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/2023072712403011/out\", \"--INPUT_FORMAT\":\"csv\", \"--HAS_HEADER\":\"False\"}" --region us-east-1 --debug
 
+StringBuffer command = new StringBuffer();
+        command.append("aws glue start-job-run --job-name \"").append(jobName).append("\" --arguments ");
+        command.append("'{\"--BUCKET_NAME\":\"").append(bucketName).append("\", \"--FILE_NAME\":\"").append(fileName).append("\", \"--INPUT_FOLDER\":\"").append(inputFolder).append("\", \"--TMP_FOLDER\":\"").append(tmpFolder).append("\", \"--INPUT_FORMAT\":\"").append(inputFormat).append("\", \"--HAS_HEADER\":\"").append(hasHeader).append("\"}'");
+        command.append(" --region ").append(region).append(" --debug");
