@@ -1,4 +1,19 @@
+#!/bin/bash
 
+ 
+
+# Set the AWS CLI command
+aws_command=( "$1" )
+echo $1
+echo "PATH:$PATH"
+
+ 
+
+ 
+
+# Execute the AWS CLI command
+eval $aws_command
+~
 
 "aws glue start-job-run --job-name "excelsiorExportFileMergeTest" --arguments '{\"--BUCKET_NAME\":\"expn-bis-dev-orderfulfillment/\", \"--FILE_NAME\":\"EDF_BIS_JDI_UN.EDF_BIS_JDI_UN.A123321_CC1FU9A9UC7_20230728124255568_1GJ6585I6_1GM3OEMCM\", \"--INPUT_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/20230728124255568/\", \"--TMP_FOLDER\":\"projects/warehouse/edf_bis_jdi/unencrypted/job_output/E73/A123321/CC1FU9A9UC7/20230728124255568/out\", \"--INPUT_FORMAT\":\"csv\", \"--HAS_HEADER\":\"False\"}' --region us-east-1 --debug"
 
