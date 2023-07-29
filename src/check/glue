@@ -49,3 +49,5 @@ region="us-east-1"
 echo "cmd: $aws_command --job_name $job_name --arguments $arguments --region $region --debug"
 
 $aws_command --job_name $job_name --arguments "$arguments" --region $region --debug
+
+aws: error: the following arguments are required: --job-name
