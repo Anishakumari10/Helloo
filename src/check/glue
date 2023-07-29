@@ -23,6 +23,7 @@ eval "$aws_command"
 
 
 #!/bin/bash
+
 echo "Starting at..." `date +%F-%T`;
 user=hadoop
 
@@ -41,11 +42,10 @@ aws_command="aws glue start-job-run"
 
 job_name="excelsiorExportFileMergeTest"
 
-arguments={\"--BUCKET_NAME\":\"$glueBucketNameheader\",\"--FILE_NAME\":\"$FILE_NAME\",\"--INPUT_FOLDER\":\"$INPUT_FOLDER\",\"--TMP_FOLDER\":\"$TMP_FOLDER\", \"--INPUT_FORMAT\":\"$INPUT_FORMAT\",\"--HAS_HEADER\":\"$HAS_HEADER\"}
+arguments="{\"--BUCKET_NAME\":\"$glueBucketName\",\"--FILE_NAME\":\"$FILE_NAME\",\"--INPUT_FOLDER\":\"$INPUT_FOLDER\",\"--TMP_FOLDER\":\"$TMP_FOLDER\",\"--INPUT_FORMAT\":\"$INPUT_FORMAT\",\"--HAS_HEADER\":\"$HAS_HEADER\"}"
 
 region="us-east-1"
 
 echo "cmd: $aws_command --job_name $job_name --arguments $arguments --region $region --debug"
 
-$aws_command --job_name $job_name --arguments $arguments --region $region --debug
-
+$aws_command --job_name $job_name --arguments "$arguments" --region $region --debug
