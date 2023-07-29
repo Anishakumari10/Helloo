@@ -20,3 +20,32 @@ echo "aws command $aws_command"
 
 # Execute the AWS CLI command
 eval "$aws_command"
+
+
+#!/bin/bash
+echo "Starting at..." `date +%F-%T`;
+user=hadoop
+
+glueBucketName=$1
+FILE_NAME=$2
+INPUT_FOLDER=$3
+TMP_FOLDER=$4
+INPUT_FORMAT=$5
+HAS_HEADER=$6
+format=$7
+header=$8
+
+echo $glueBucketName $FILE_NAME $INPUT_FOLDER $TMP_FOLDER $INPUT_FORMAT $HAS_HEADER
+
+aws_command="aws glue start-job-run"
+
+job_name="excelsiorExportFileMergeTest"
+
+arguments={\"--BUCKET_NAME\":\"$glueBucketNameheader\",\"--FILE_NAME\":\"$FILE_NAME\",\"--INPUT_FOLDER\":\"$INPUT_FOLDER\",\"--TMP_FOLDER\":\"$TMP_FOLDER\", \"--INPUT_FORMAT\":\"$INPUT_FORMAT\",\"--HAS_HEADER\":\"$HAS_HEADER\"}
+
+region="us-east-1"
+
+echo "cmd: $aws_command --job_name $job_name --arguments $arguments --region $region --debug"
+
+$aws_command --job_name $job_name --arguments $arguments --region $region --debug
+
