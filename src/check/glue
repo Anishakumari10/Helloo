@@ -3,7 +3,6 @@ WHEN COL_NAME= 'Filler1' THEN 9
 WHEN COL_NAME= 'yearsInFile' THEN 2
 WHEN COL_NAME= 'estimatedNumberOfEmployees' THEN 7
 WHEN COL_NAME= 'estimatedAnnualSalesAmount' THEN 8
-primarySicCodeIndustryClassification
 WHEN COL_NAME= 'derogatoryLiabilityAmount' THEN 10
 WHEN COL_NAME= 'uccCount' THEN 5
 WHEN COL_NAME= 'numberOfLegalItems' THEN 3
@@ -467,11 +466,9 @@ WHEN COL_NAME= 'ipv2ScoreFactor3' THEN 3
 WHEN COL_NAME= 'ipv2ScoreFactor4' THEN 3
 WHEN COL_NAME= 'enterpriseEmployeeStartSize' THEN 11
 WHEN COL_NAME= 'enterpriseEmployeeEndSize' THEN 11
-enterpriseEmployeeTransparencyCode
 WHEN COL_NAME= 'enterpriseSalesStartSize' THEN 11
 WHEN COL_NAME= 'enterpriseSalesEndSize' THEN 11
 WHEN COL_NAME= 'locationEmployeeStartSize' THEN 11
 WHEN COL_NAME= 'locationEmployeeEndSize' THEN 11
-locationEmployeeTransparencyCode
 WHEN COL_NAME= 'locationSalesStartSize' THEN 11
 WHEN COL_NAME= 'locationSalesEndSize' THEN 11
